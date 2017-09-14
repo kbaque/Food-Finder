@@ -1,0 +1,28 @@
+{
+  "name": "Food-Finder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kbaque/Food-Finder.git",
+  "author": "Karen Baque <k.baque@aol.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "debugger": "DEBUG=*:* nodemon app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "install": "^0.10.1",
+    "method-override": "^2.3.9",
+    "nodemon": "^1.12.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg-promise": "^6.5.4"
+  }
+}
