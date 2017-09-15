@@ -1,7 +1,6 @@
 const express = require('express');
 const foodFinderRouter = express.Router();
 const authHelpers = require('../services/auth/auth-helpers');
-
 const foodFinderController = require('../controllers/foodFinder-controller');
 
 foodFinderRouter.get('/', foodFinderController.index);
