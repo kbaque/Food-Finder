@@ -31,7 +31,16 @@ foodFinderController.show = (req, res) =>{
 
 foodFinderController.create = (req, res) => {
     FoodFinder.create({
-        ###
+        name: req.body.name,
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        area: req.body.area,
+        postal_code: req.body.postal_code,
+        country: req.body.country,
+        phone: req.body.phone,
+        price: req.body.price,
+        image_url: req.body.image_url,
     })
     .then(foodFinder => {
         res.json({
@@ -46,9 +55,17 @@ foodFinderController.create = (req, res) => {
 };
 
 foodFinderController.update = (req, res) => {
-    FoodFinder.update(
-        {###
-
+    FoodFinder.update({
+         name: req.body.name,
+         address: req.body.address,
+         city: req.body.city,
+         state: req.body.state,
+         area: req.body.area,
+         postal_code: req.body.postal_code,
+         country: req.body.country,
+         phone: req.body.phone,
+         price: req.body.price,
+         image_url: req.body.image_url,
         },
         req.params.id,
     )
@@ -64,7 +81,7 @@ foodFinderController.update = (req, res) => {
     });
 };
 
-foodFinderController.destroy = (req, res) => {
+foodFinderController.delete = (req, res) => {
     FoodFinder.destroy(req.params.id)
     .then(foodFinder => {
         res.json({
