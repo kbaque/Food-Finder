@@ -1,7 +1,7 @@
 {
   "name": "Food-Finder",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "https://github.com/kbaque/Food-Finder.git",
   "author": "Karen Baque <k.baque@aol.com>",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "express-session": "^1.15.5",
     "install": "^0.10.1",
     "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
     "nodemon": "^1.12.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",

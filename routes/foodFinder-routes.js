@@ -8,7 +8,7 @@ foodFinderRouter.post('/', foodFinderController.create);
 
 foodFinderRouter.get('/:id', foodFinderController.show);
 foodFinderRouter.put('/:id', foodFinderController.update);
-foodFinderRouter.delete('/:id', foodFinderController.destroy);
+foodFinderRouter.delete('/:id', foodFinderController.delete);
 
 module.exports = foodFinderRouter;
 

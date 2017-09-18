@@ -4,12 +4,12 @@ const options = {
     }
 }
 
-const app = require('pg-promise')(options)
+const pgp = require('pg-promise')(options)
 
 function setDatabase() {
     if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
         return pgp({
-            database: 'foodFinder_dev',
+            database: 'food_finder_dev',
             port: 5432,
             host: 'localhost',
         })

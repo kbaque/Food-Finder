@@ -1,4 +1,4 @@
-\connect foodFinder_dev
+\connect food_finder_dev
 
 CREATE TABLE if NOT EXISTS restaurant (
     id SERIAL PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE TABLE if NOT EXISTS restaurant (
     country VARCHAR(225),
     phone VARCHAR(225),
     price VARCHAR(225),
-    image_url VARCHAR(255),
+    image_url VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS users (

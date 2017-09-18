@@ -1,4 +1,4 @@
-\connect foodFinder_dev
+\connect food_finder_dev
 
 INSERT INTO restaurant (name, address, city, state, area, postal_code, country, phone, price, image_url) VALUES
 (
