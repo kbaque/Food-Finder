@@ -15,7 +15,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001/",
-  "main": "index.js",
-  "license": "MIT"
+  "proxy": "http://localhost:3001/"
+ 
 }

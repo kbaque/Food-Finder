@@ -1,6 +1,15 @@
 \connect food_finder_dev
 
-CREATE TABLE if NOT EXISTS restaurant (
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(225) UNIQUE NOT NULL,
+    password_digest TEXT NOT NULL,
+    firstname VARCHAR(225),
+    lastname VARCHAR(225)
+);
+
+CREATE TABLE if NOT EXISTS foodFinder (
     id SERIAL PRIMARY KEY,
     name VARCHAR(225),
     address VARCHAR(225),
@@ -14,14 +23,11 @@ CREATE TABLE if NOT EXISTS restaurant (
     image_url VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    email VARCHAR(225) UNIQUE NOT NULL,
-    password_digest TEXT NOT NULL,
-    firstname VARCHAR(225),
-    lastname VARCHAR(225)
+CREATE TABLE IF NOT EXISTS search (
+    search_id SERIAL PRIMARY KEY,
+    data jsonb,
+    user_id int REFERENCES users(id) NOT NULL
 );
 
-ALTER TABLE restaurant 
+ALTER TABLE foodFinder
 ADD COLUMN user_id INTEGER REFERENCES users(id);

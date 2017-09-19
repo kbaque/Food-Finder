@@ -2,6 +2,7 @@ const FoodFinder = require('../models/foodFinder');
 const foodFinderController = {};
 
 foodFinderController.index = (req, res) => {
+    console.log(" food finding ")
     FoodFinder.findAll()
     .then(foodFinders =>{
         res.json({

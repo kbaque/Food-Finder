@@ -2,28 +2,28 @@ const db = require('../db/config');
 const FoodFinder = {};
 
 FoodFinder.findAll = () => {
-    return db.query('SELECT * FROM restaurant');
+    return db.query('SELECT * FROM foodFinder');
 }
 
 FoodFinder.findById = (id) => {
     return db.oneOrNone(`
-      SELECT * FROM restaurant
+      SELECT * FROM foodFinder
       WHERE id = $1
     `, [id]);
 }
 
-FoodFinder.create = (restaurant, userid) => {
+FoodFinder.create = (foodFinder, userid) => {
     return db.one(`
-     INSERT INTO restaurant
+     INSERT INTO foodFinder
      (name, address, city, state, area, postal_code, country, phone, price, image_url, user_id) 
      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
      RETURNING *
-    `, [restaurant.name, restaurant.address, restaurant.city, restaurant.state, restaurant.area, restaurant.postal_code, restaurant.country, restaurant.phone, restaurant.price, restaurant.image_url, userid]);
+    `, [foodFinder.name, foodFinder.address, foodFinder.city, foodFinder.state, foodFinder.area, foodFinder.postal_code, foodFinder.country, foodFinder.phone, foodFinder.price, foodFinder.image_url, userid]);
   }
 
-FoodFinder.update = (restaurant, id) => {
+FoodFinder.update = (foodFinder, id) => {
     return db.one(`
-     UPDATE restaurant SET
+     UPDATE foodFinder SET
      name = $1,
      address = $2,
      city = $3,
@@ -36,12 +36,12 @@ FoodFinder.update = (restaurant, id) => {
      image_url = $10 
      WHERE id = $11
      RETURNING *
-    `, [restaurant.name, restaurant.address, restaurant.city, restaurant.state, restaurant.area, restaurant.postal_code, restaurant.country, restaurant.phone, restaurant.price, restaurant.image_url, id]);
+    `, [foodFinder.name, foodFinder.address, foodFinder.city, foodFinder.state, foodFinder.area, foodFinder.postal_code, foodFinder.country, foodFinder.phone, foodFinder.price, foodFinder.image_url, id]);
 }
 
 FoodFinder.destroy = (id) => {
     return db.none(`
-     DELETE FROM restaurant
+     DELETE FROM foodFinder
      WHERE id = $1
     `, [id]);
 }

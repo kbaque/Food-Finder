@@ -39,6 +39,10 @@ app.get('/', (req, res) => {
 const foodFinderRoutes = require('./routes/foodFinder-routes');
 app.use('/foodFinder', foodFinderRoutes);
 
+const searchRoutes = require('./routes/search-routes');
+app.use('/search', searchRoutes);
+
+
 app.use('*', (req, res) => {
     res.status(400).json({
         message: 'Endpoint not found!',
