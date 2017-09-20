@@ -19,32 +19,23 @@ class Home extends Component {
     }
 
   render() {
-//        if (some boolean === true) {
-//            return (
-//                <div>
-//                 <Redirect /results
-//                    <div>
-//            )
-//        } else {}
-       
        return (
            <div className="home-page">
-               <h2> Home </h2>
-          <div className="login">
-              <Link to='/login'>
-               <button> Login </button>
-               </Link>
-          </div>
-          <div className="register">
-                <Link to='/register'>
-                <button> Register </button>
-                </Link>
-          </div>
-         <form className="search">
-                <input onChange={this.props.handleInputChange} name="zip" type="text" placeholder="Zipcode"/>
-                 <input  type="submit" value='Submit'/>
+               <center>
+                   <div className="title">
+               <h2> Find restaurants near you 🍽 </h2>
+               </div>
+               </center>
+          <center>
+         <form className="search" onSubmit={this.props.handleClickZip}> 
+                <input className="zipcode" onChange={this.props.handleInputChange} name="zip" type="text" placeholder="Zipcode"/>
+{/*               <h1>   <input  type="submit" value='search' />  </h1> */}
+                    <div className="mdl-card__actions mdl-card--border">
+                        <input className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" id="search" type="submit" value='Search' onClick={this.handleSubmit} />
+                    </div> 
                <Link to='/results'></Link>
-          </form>
+          </form>
+          </center>
         </div>
       )
    }

@@ -1,24 +1,142 @@
-.App {
+/* //home */
+.home-page{
+  height: 100vh;
+  width: 100vw;
+  background-image:url("http://hottytoddy.com/wp-content/uploads/2016/08/AdobeStock_79215008.jpg");
+
+}
+h2{
+  color:white;
+  /* padding-bottom: 100px; */
+
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* font-size: 50px;
+  display: inline-block; */
+  /* text-decoration: none; */
+  /* width: 100%;
+  margin: 20px 0; */
+  /* padding: 15px; */
+  /* text-decoration: none;
+  color: black;
+  font-family: 'inconsolata', monospace;
+  text-transform: uppercase; */
+  /* width: 100%;
+  background: #eee;
+  padding: 20px; */
+ 
+}
+/* ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} */
+nav ul{
+  display: flex;
+}
+nav ul li{
+  margin-right: 20px;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+}
+.title{
+  position: fixed;
+  top: 30%;
+  left: 40%;
+}
+.zipcode{
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  border-style:solid pink 10px;
+  background-color: white;
+  margin-top: 350px;
+  margin-left: 150px;
+  width: 900px;
+  height: 85px;
+}
+#search{
+  /* font-size:  */
+  margin-top: -140px;
+  margin-left: 1250px;
+}
+/* //login-page */
+.log-container{
+  height: 100vh;
+  width: 100vw;
+  background-color:#E54B4B;
+}
+.login-page{
+  border-radius: 10px;
+  position: fixed;
+  bottom: 25%;
+  left: 35%;
+  /* margin-top: -50%;
+  margin-left: -100%; */
+  width: 600px;
+  height: 500px;
+}
+/* register-page */
+.reg-container{
+  height: 100vh;
+  width: 100vw;
+  background-color:#E54B4B;
+
+}
+.register-page{
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 25%;
+  left: 35%;
+  width: 600px;
+  height: 700px;
+  
+}
+
+/* popular */
+.popular-page{
+  height: 100vh;
+  width: 100vw;
+  background-color: #E54B4B;
+}
+img{
+    width: 400px;
+    height: 600px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* results */
+.searchpage{
+  height: 100vh;
+  width: 100vw;
+  background-color:#E54B4B;
+}
+.data {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+img{
+  border-radius: 10px;
+}
+h3{
+  font: black;
+  font-size: 50px;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+p{
+  font-size: 20px;
 }

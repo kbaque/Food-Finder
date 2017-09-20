@@ -39,21 +39,6 @@ inputSearch(e){
     this.setState({search: e.target.value})
 }
 
-//    removeFromLists = data => {
-//        axios.delete(`/search/${data.search_id}`)
-//        .then(res => {
-//            let currentSearch = this.state.apiData;
-//            currentSearch = currentSearch.filter(search => {
-//                return search.search_id !== data.search_id
-//            });
-//            this.setState({
-//                apiData: currentSearch
-//            });
-//        }).catch(err => {
-//            console.log(err);
-//        })
-//    }
-
     render() {
         return (
             <Router>

@@ -4,7 +4,7 @@ const axios = require ('axios');
 
 function getPlaces (req, res) {
     let places = req.params.zip;
-    console.log(places+ " api data received----------->");
+    console.log(places+ " api data received");
     axios.get(`http://opentable.herokuapp.com/api/restaurants?zip=${places}`)
     .then( search=> {
       console.log("data rec");

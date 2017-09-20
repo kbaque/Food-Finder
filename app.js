@@ -33,7 +33,7 @@ const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
-    res.send('heyyyy bitchesss');
+    res.send('Hello World 👋🏼');
 })
 
 const foodFinderRoutes = require('./routes/foodFinder-routes');
